@@ -3,9 +3,11 @@ module.exports = function(app) {
 
 		var request = require('request');
 
+		console.log('make API request');
+		/*
 		request({
 			method: 'GET',
-			url: 'https://private-d65a6-dssapi.apiary-mock.com/api/user/?user_id=user_id',
+			url: '',
 			headers: {
 				'Authorization': 'Basic 0123456789ABCDEF=='
 			}}, function (err, response, body) {
@@ -22,6 +24,7 @@ module.exports = function(app) {
 
 				res.send(body);
 		});
+		*/
 
 	});
 }
