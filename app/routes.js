@@ -1,6 +1,6 @@
-import App from './App/App';
-import Home from './Home/Home';
-import UserContainer from './User/UserContainer';
+import App from './components/App/App';
+import Home from './components/Home/Home';
+import UserContainer from './components/User/UserContainer';
 
 // Configure "Plain" Routes
 // Fixes HMR warning

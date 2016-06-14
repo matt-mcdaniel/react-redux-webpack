@@ -1,6 +1,5 @@
 import React from 'react';
 import './_user.scss';
-import { store } from '../Root';
 
 class Route2 extends React.Component {
 	constructor(){
@@ -10,9 +9,7 @@ class Route2 extends React.Component {
 	}
 
 	getUser(){
-
 		this.props.updateCurrentUser();
-
 	}
 
 	render(){

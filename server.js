@@ -23,6 +23,7 @@ if (env === 'development') {
 	}));
 
 	app.use(require('webpack-hot-middleware')(compiler));
+
 } else if (env === 'production') {
 
 	// Specify location for static assets
