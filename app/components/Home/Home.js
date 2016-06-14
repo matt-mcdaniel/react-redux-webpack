@@ -1,6 +1,6 @@
-import './_home.scss';
+import './Home.scss';
 import React from 'react';
-import squirrelImage from './squirrel.jpg';
+import squirrelImage from 'img/squirrel.jpg';
 
 class Home extends React.Component {
 	render(){

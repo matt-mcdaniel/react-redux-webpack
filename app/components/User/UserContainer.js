@@ -1,13 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import User from './User';
-import {updateCurrentUser} from '../../actions/user';
+import {updateUser, resetUser} from '../../state/actions/user';
 
 const mapStateToProps = state => state;
 
 const mapDispatchToProps = (state) => {
 	return dispatch => ({
-		updateCurrentUser: (user) => dispatch(updateCurrentUser())
+		updateUser: () => dispatch(updateUser()),
+		resetUser: () => dispatch(resetUser())
 	})
 }
 

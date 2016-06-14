@@ -1,7 +1,8 @@
-var webpack = require('webpack');
-var path = require('path');
+const validate = require('webpack-validator');
+const webpack = require('webpack');
+const path = require('path');
 
-module.exports = {
+module.exports = validate({
 	devtool: 'eval-source-map',
 	entry: [
 		'webpack-hot-middleware/client',
@@ -25,8 +26,15 @@ module.exports = {
 			},
 			{
 				test: /\.(png|jpg|jpeg)$/,
-				loader: 'url-loader?limit=8192&name=img/[name].[ext]'
+				loader: 'url-loader?limit=10240&name=img/[name].[ext]'
 			}
+		]
+	},
+	resolve: {
+		modulesDirectories: [
+			'node_modules',
+			'app',
+			'assets'
 		]
 	},
 	plugins: [
@@ -39,4 +47,4 @@ module.exports = {
 			}
 		}),
 	],
-}
+});

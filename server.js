@@ -24,7 +24,7 @@ if (env === 'development') {
 
 	app.use(require('webpack-hot-middleware')(compiler));
 
-} else if (env === 'production') {
+} else {
 
 	// Specify location for static assets
 	app.use(express.static(path.join(__dirname, 'public')));

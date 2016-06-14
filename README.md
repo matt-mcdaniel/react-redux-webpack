@@ -25,3 +25,12 @@ Build Dependencies
 ```
 npm run build
 ```
+
+### Resources:
+
+Authentication
+* https://github.com/mjrussell/redux-auth-wrapper
+* https://github.com/joshgeller/react-redux-jwt-auth-example
+
+Forms
+* https://github.com/JedWatson/react-select

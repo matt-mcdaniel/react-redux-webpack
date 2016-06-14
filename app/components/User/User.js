@@ -1,16 +1,7 @@
 import React from 'react';
-import './_user.scss';
+import './User.scss';
 
 class Route2 extends React.Component {
-	constructor(){
-		super();
-
-		this.getUser = this.getUser.bind(this);
-	}
-
-	getUser(){
-		this.props.updateCurrentUser();
-	}
 
 	render(){
 		if (this.props.user) {
@@ -23,12 +14,14 @@ class Route2 extends React.Component {
 					<div>{this.props.user.phone}</div>
 					<div>{this.props.user.organization}</div>
 					<div>{this.props.user.email}</div>
+
+					<button onClick={() => this.props.resetUser()}>Reset</button>
 				</span>
 			)
 		} else {
 			return (
 				<span>
-					<div className="get-user-button" onClick={this.getUser}>Fetch User</div>
+					<div className="get-user-button" onClick={() => this.props.updateUser()}>Fetch User</div>
 				</span>
 			)
 		}

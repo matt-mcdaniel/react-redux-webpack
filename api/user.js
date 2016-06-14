@@ -9,7 +9,16 @@ module.exports = function(app) {
 			headers: {
 				'Authorization': 'Basic 0123456789ABCDEF=='
 			}}, function (err, response, body) {
-				console.log('Status:', response.statusCode);
+
+				// write to log file
+				console.log(
+					'\n',
+					'---\n',
+					response.headers.date + '\n',
+					response.request.method + ' ' + response.statusCode + ' ' + response.statusMessage + '\n',
+					response.request.uri.href + '\n',
+					'---'
+				);
 
 				res.send(body);
 		});

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import 'whatwg-fetch';
 
 class Home extends React.Component {
 

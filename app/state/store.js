@@ -1,12 +1,12 @@
-import currentUser from './reducers/currentUser';
 import thunk from 'redux-thunk';
 import { saveState, loadState } from './localStorage';
 import { createStore, applyMiddleware } from 'redux';
 import throttle from 'lodash/throttle';
+import user from './reducers/user';
 
 const persistedState = loadState();
 const store = createStore(
-	currentUser,
+	user,
 	persistedState,
 	applyMiddleware(thunk)
 );
